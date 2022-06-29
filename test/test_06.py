@@ -29,8 +29,9 @@ def test_step06_backward():
     a.grad = B.backward(b.grad)
     x.grad = A.backward(a.grad)
     print(x.grad)
-    ans =3.297442541400256
+    ans = 3.297442541400256
     assert x.grad == pytest.approx(ans)
+
 
 def test_step06_single_backward():
     # Start Forward
@@ -38,10 +39,10 @@ def test_step06_single_backward():
     A = step06.Exp()
     y = A(x)
     print(y)
-    
-    #start backward()
-    y.grad=np.array(1.0)
-    x.grad=A.backward(y.grad)
+
+    # start backward()
+    y.grad = np.array(1.0)
+    x.grad = A.backward(y.grad)
     print(x.grad)
 
 
