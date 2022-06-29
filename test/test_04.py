@@ -31,4 +31,3 @@ def test_step04_diff():
     dy = step04.numerical_diff(f, x)
     ans = 4.0  # f(x)^ = 2x. f(2)^ = 4.0
     assert dy == pytest.approx(ans)
-

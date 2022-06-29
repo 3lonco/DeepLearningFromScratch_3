@@ -1,3 +1,6 @@
+import numpy as np
+
+
 class Function:
     def __init__(self, input):
         x = input.data  # Get a data
