@@ -21,11 +21,10 @@ def test_step07_recall():
     b = B(a)
     y = C(b)
 
-    #backward
+    # backward
     y.grad = np.array(1.0)
     y.backward()
     ans = 3.297442541400256
-    print(x.grad)
     assert x.grad == pytest.approx(ans)
 
 
